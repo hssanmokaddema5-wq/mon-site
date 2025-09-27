@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hsan Mokaddem — Plateforme d'Agriculture Durable</title>
+    <meta
+      name="description"
+      content="Hsan Mokaddem — Ingénieur d'agronomie. Projets, services et boutique pour l'agriculture durable."
+    />
+    <style>
+      :root {
+        --bg: #f7faf7;
+        --card: #ffffff;
+        --muted: #6b7280;
+        --accent: #2f855a;
+        --accent-2: #276749;
+        --glass: rgba(255, 255, 255, 0.6);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        margin: 0;
+        background: linear-gradient(180deg, #f0fbf2, #eef6ee 60%);
+        color: #0f172a;
+      }
+      header {
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: white;
+        padding: 48px 16px 72px;
+        clip-path: ellipse(120% 80% at 10% 0%);
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      .logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+      nav a {
+        color: rgba(255, 255, 255, 0.95);
+        text-decoration: none;
+        margin-left: 18px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 28px;
+        align-items: center;
+        margin-top: 24px;
+      }
+      .hero h1 {
+        font-size: 34px;
+        margin: 0 0 12px;
+      }
+      .hero p.lead {
+        margin: 0 0 18px;
+        color: rgba(255, 255, 255, 0.95);
+        max-width: 56ch;
+      }
+      .card {
+        background: var(--card);
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+        padding: 18px;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+      h2 {
+        margin: 0 0 12px;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 20px;
+        align-items: start;
+      }
+      .meta {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+      }
+      .project {
+        padding: 16px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #fff, #f8fff8);
+        border: 1px solid #eef6ee;
+      }
+      .project h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 8px;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .shop-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+      }
+      .product {
+        padding: 12px;
+        background: linear-gradient(180deg, #fff, #fcfff9);
+        border-radius: 10px;
+        border: 1px solid #e6f0e7;
+      }
+      .product h4 {
+        margin: 8px 0 6px;
+      }
+      .price {
+        font-weight: 700;
+        color: var(--accent-2);
+      }
+
+      footer {
+        padding: 36px 0;
+        background: transparent;
+        border-top: 1px dashed #e6eee6;
+      }
+      .contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      /* responsive */
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .nav a {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="nav">
+          <div class="brand">
+            <div class="logo">HM</div>
+            <div>
+              <div style="font-weight: 700">Hsan Mokaddem</div>
+              <div style="font-size: 13px; opacity: 0.9">
+                Ingénieur d'agronomie — Agriculture durable & innovation
+              </div>
+            </div>
+          </div>
+          <nav>
+            <a href="#about">À propos</a>
+            <a href="#projets">Projets</a>
+            <a href="#boutique">Boutique</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+
+        <div class="hero">
+          <div>
+            <h1>Ingénierie agronomique, technologie & pratiques durables</h1>
+            <p class="lead">
+              Je suis <strong>Hsan Mokaddem</strong>, ingénieur d'agronomie
+              passionné par la transformation des pratiques agricoles vers plus
+              de résilience, de productivité et de respect de l'environnement.
+              Cette plateforme rassemble mes services, projets et une petite
+              boutique dédiée aux outils et produits pour les agriculteurs,
+              coopératives et éco-entrepreneurs.
+            </p>
+            <a class="btn" href="#contact">Me contacter</a>
+          </div>
+
+          <aside class="card">
+            <h3>Informations</h3>
+            <p class="meta">
+              <strong>Nom :</strong> Hsan Mokaddem<br /><strong
+                >Profession :</strong
+              >
+              Ingénieur d'agronomie<br /><strong>Langues :</strong> Français,
+              Arabe, Anglais<br /><strong>Localisation :</strong> Tunisie (à
+              préciser)
+            </p>
+            <hr
+              style="
+                border: none;
+                border-top: 1px solid #eef6ee;
+                margin: 12px 0;
+              "
+            />
+            <p style="font-size: 13px; color: var(--muted)">
+              Remplacez les coordonnées ci-dessous par vos informations réelles
+              (téléphone, email, réseaux sociaux). La boutique est éditable
+              directement dans le code.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="about">
+        <h2>À propos de moi</h2>
+        <div class="about-grid">
+          <div>
+            <p class="meta">
+              Ingénieur d'agronomie diplômé, je combine connaissances
+              agronomiques, technologies d'irrigation intelligente et pratiques
+              agroécologiques pour concevoir des systèmes agricoles productifs
+              et durables. Je travaille avec des petites exploitations, des
+              coopératives et des start-ups agricoles pour : optimisation de la
+              fertilisation, gestion de l'eau, intégration des cultures
+              associées, et conception de chaînes courtes de commercialisation.
+            </p>
+
+            <h3>Compétences clés</h3>
+            <ul>
+              <li>Diagnostics agronomiques et plan de fertilisation</li>
+              <li>
+                Conception de systèmes d'irrigation goutte-à-goutte et
+                automation
+              </li>
+              <li>
+                Agroécologie : rotations, cultures associées, couverture du sol
+              </li>
+              <li>Gestion post-récolte et circuits courts</li>
+              <li>Formation & accompagnement technique</li>
+            </ul>
+
+            <h3>Vision</h3>
+            <p class="meta">
+              Mon objectif est de rendre l'agriculture résiliente face aux aléas
+              climatiques, économiquement viable pour les producteurs et
+              bénéfique pour la biodiversité locale — en combinant savoir-faire
+              traditionnel et innovations techniques accessibles.
+            </p>
+          </div>
+
+          <aside class="card">
+            <h3>Services proposés</h3>
+            <ul class="meta">
+              <li>Audit de parcelle & recommandations techniques</li>
+              <li>Design d'irrigation et pilotage par capteurs</li>
+              <li>Plan de fertilisation organique et biologique</li>
+              <li>Formation terrain pour agriculteurs et étudiants</li>
+              <li>Montage de projets & recherche de financements</li>
+            </ul>
+            <div style="margin-top: 12px">
+              <a class="btn" href="#contact">Demander un devis</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="projets">
+        <h2>Projets (exemples)</h2>
+        <p class="meta">
+          Voici quelques projets imaginés / réalisés pour illustrer l'approche
+          et les capacités techniques — ces propositions peuvent être adaptées à
+          votre contexte local.
+        </p>
+
+        <div class="projects">
+          <article class="project">
+            <h3>Ferme intelligente pilote</h3>
+            <p>
+              Installation d'un système d'irrigation goutte-à-goutte piloté par
+              capteurs d'humidité et une application mobile simple. Résultat
+              attendu : -30% consommation d'eau et augmentation de rendement de
+              12%.
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>Programme de transition agroécologique</h3>
+            <p>
+              Accompagnement d'une coopérative sur trois ans pour mettre en
+              place rotations optimisées, haies brise-vent, et production de
+              compost local — objectif réduction des intrants chimiques et
+              amélioration de la fertilité du sol.
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>Chaîne courte & pack marketing</h3>
+            <p>
+              Conception d'une stratégie de vente locale et en ligne pour
+              légumes biologiques : packaging, tarification, points de vente et
+              calendrier de récolte pour lisser les revenus.
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>Micro-serre modulaire</h3>
+            <p>
+              Design d'une micro-serre économique pour production de plants et
+              cultures hors-saison, avec kit d'irrigation et guide technique
+              pour producteurs.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="boutique">
+        <h2>Boutique — équipements & intrants durables</h2>
+        <p class="meta">
+          Petite sélection de produits recommandés pour démarrer ou améliorer
+          une exploitation. Les prix sont indicatifs — modifiez selon votre
+          catalogue.
+        </p>
+
+        <div class="shop-grid" id="products">
+          <div class="product">
+            <h4>Kit goutte-à-goutte (10 plantes)</h4>
+            <div class="price">50 TND</div>
+            <p style="font-size: 13px; color: var(--muted)">
+              Tuyaux, émetteurs et raccords. Idéal pour jardins et petites
+              parcelles.
+            </p>
+            <button class="btn" onclick="addToCart('Kit goutte-à-goutte',50)">
+              Ajouter au panier
+            </button>
+          </div>
+
+          <div class="product">
+            <h4>Composteur domestique</h4>
+            <div class="price">35 TND</div>
+            <p style="font-size: 13px; color: var(--muted)">
+              Composteur rotatif 80L — transforme les déchets en amendement
+              riche.
+            </p>
+            <button class="btn" onclick="addToCart('Composteur domestique',35)">
+              Ajouter au panier
+            </button>
+          </div>
+
+          <div class="product">
+            <h4>Capteur d'humidité (sol)</h4>
+            <div class="price">18 TND</div>
+            <p style="font-size: 13px; color: var(--muted)">
+              Mesure simple et fiable pour gérer l'irrigation.
+            </p>
+            <button class="btn" onclick="addToCart('Capteur d\'humidité',18)">
+              Ajouter au panier
+            </button>
+          </div>
+
+          <div class="product">
+            <h4>Semences locales (paquet)</h4>
+            <div class="price">6 TND</div>
+            <p style="font-size: 13px; color: var(--muted)">
+              Variétés adaptées au climat local — sélection paysanne.
+            </p>
+            <button class="btn" onclick="addToCart('Semences locales',6)">
+              Ajouter au panier
+            </button>
+          </div>
+        </div>
+
+        <div style="margin-top: 18px" class="card">
+          <h3>Panier</h3>
+          <div id="cart" style="min-height: 40px">Votre panier est vide.</div>
+          <div style="margin-top: 12px">
+            <button class="btn" onclick="checkout()">
+              Passer à la commande
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact & réseaux</h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            align-items: start;
+          "
+        >
+          <div class="card">
+            <h3>Coordonnées</h3>
+            <div class="contact-list">
+              <div>
+                <strong>Email :</strong> <em>votre.email@exemple.tn</em>
+                <span style="color: var(--muted); font-size: 13px"
+                  >(remplacez)</span
+                >
+              </div>
+              <div>
+                <strong>Téléphone :</strong> <em>+216 XX XXX XXX</em>
+                <span style="color: var(--muted); font-size: 13px"
+                  >(remplacez)</span
+                >
+              </div>
+              <div>
+                <strong>Adresse :</strong> <em>Ville, Région, Tunisie</em>
+              </div>
+              <div><strong>LinkedIn :</strong> <em>/in/hsanmokaddem</em></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Envoyer un message</h3>
+            <form
+              onsubmit="event.preventDefault(); alert('Formulaire de contact (simulation) - remplacez l\'action par votre backend)')"
+            >
+              <div style="margin-bottom: 8px">
+                <input
+                  required
+                  placeholder="Votre nom"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 8px;
+                    border: 1px solid #e6eee6;
+                  "
+                />
+              </div>
+              <div style="margin-bottom: 8px">
+                <input
+                  required
+                  placeholder="Votre email"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 8px;
+                    border: 1px solid #e6eee6;
+                  "
+                />
+              </div>
+              <div style="margin-bottom: 8px">
+                <textarea
+                  required
+                  placeholder="Message"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 8px;
+                    border: 1px solid #e6eee6;
+                    min-height: 100px;
+                  "
+                ></textarea>
+              </div>
+              <div><button class="btn" type="submit">Envoyer</button></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          "
+        >
+          <div style="font-size: 14px">
+            © <strong>Hsan Mokaddem</strong> — Plateforme d'Agriculture Durable
+          </div>
+          <div style="font-size: 13px; color: var(--muted)">
+            Conçue pour promouvoir des pratiques agricoles responsables et
+            rentables.
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Simple panier local
+      const CART_KEY = "hm_cart_v1";
+      function getCart() {
+        try {
+          return JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+        } catch (e) {
+          return [];
+        }
+      }
+      function saveCart(c) {
+        localStorage.setItem(CART_KEY, JSON.stringify(c));
+        renderCart();
+      }
+      function addToCart(name, price) {
+        const c = getCart();
+        const existing = c.find((i) => i.name === name);
+        if (existing) {
+          existing.q++;
+        } else {
+          c.push({ name, price, q: 1 });
+        }
+        saveCart(c);
+      }
+      function renderCart() {
+        const c = getCart();
+        const el = document.getElementById("cart");
+        if (c.length === 0) {
+          el.innerHTML = "Votre panier est vide.";
+          return;
+        }
+        let html = '<ul style="padding-left:18px;margin:0">';
+        let total = 0;
+        c.forEach((i) => {
+          html += `<li>${i.name} x${i.q} — ${
+            i.price * i.q
+          } TND <button style="margin-left:8px" onclick="removeItem(\'${
+            i.name
+          }\')">suppr</button></li>`;
+          total += i.price * i.q;
+        });
+        html += "</ul>";
+        html += `<div style="margin-top:8px"><strong>Total : ${total} TND</strong></div>`;
+        el.innerHTML = html;
+      }
+      function removeItem(name) {
+        let c = getCart();
+        c = c.filter((i) => i.name !== name);
+        saveCart(c);
+      }
+      function checkout() {
+        const c = getCart();
+        if (c.length === 0) {
+          alert("Panier vide");
+          return;
+        }
+        alert(
+          "Simulation de commande — merci ! (Intégrer votre solution de paiement pour activer)"
+        );
+        localStorage.removeItem(CART_KEY);
+        renderCart();
+      }
+      renderCart();
+    </script>
+  </body>
+</html>
